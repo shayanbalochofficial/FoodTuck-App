@@ -1,0 +1,123 @@
+/* globals.css */
+
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+/* Tailwind Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+.hover\:bg-yellow-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+
+.hero-background {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/hero/herobg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+.stats-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Desktop - Background Image */
+.background-image {
+  display: none;
+}
+
+.stats-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 3rem 1.5rem;
+}
+.about-bg {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(248, 183, 4, 0.9),
+      rgba(255, 124, 1, 0.7)
+    ),
+    url("/bd-ts.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+}
+
+.stat-item i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ff7f50;
+}
+
+.stat-item h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-item p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Mobile - No Image & Adjust Layout */
+@media (max-width: 640px) {
+  .background-image {
+    display: none; /* Hide the image on mobile */
+  }
+
+  .stats-overlay {
+    background-color: black;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stat-item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1rem;
+  }
+
+  .stat-item p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .background-image {
+    display: block; /* Show the image on medium screens and larger */
+  }
+}
