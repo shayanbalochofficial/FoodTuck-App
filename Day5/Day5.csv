@@ -1,0 +1,13 @@
+Test Case ID,Description,Steps,Expected Result,Actual Result,Status,Remarks
+TC01,Validate product listing,"Load homepage, verify displayed products",Products load and display correctly,Products load as expected,Passed,Displayed perfectly
+TC02,Test search functionality,"Enter query in search bar, check results",Correct results matching query,Query not matches result,Skipped,-
+TC03,Add product to cart,"Click ""Add to Cart"" on a product",Product is added to cart,Product added,Passed,Successfully added
+TC03,Delete product from cart,Click delete icon,Product is deleted from cart,Product deleted,Passed,Successfully deleted
+TC04,Add product to wishlist,Click wishlist icon,Product is added to wishlist,Product added,Passed,Added successfully
+TC05,Delete product from wishlist,Click delete icon,Product is deleted from wishlist,Product deleted,Passed,Deleted successfully
+TC06,Dynamic routing for product,Click on a product,Individual product page loads and open detailed page,Product detail page opens,Passed,Details rendered gracefully
+TC07,API error handling,Remove API and loads page,UI fallback display,UI fallback displayed,Passed,Handled perfectly
+TC08,Input sanitization,Add required inputs in contact form,Invalid input data displays error message,Error message displayed,Passed,Perfect sanitization
+TC09,Filter products,Set filter on product listing page,Products filtered according to category,Products are filtered based on category,Passed,Successfully filtered
+TC10,Fallback UI for offline errors,Disconnect wifi and loads product detail page,"Fallback UI message display ""You are offline""",Message displayed as expected,Passed,Message displayed successfully
+TC11,Responsiveness on mobiles/tablets,Use tool browserstack,All components are responsive on both devices,Some components needs improvement,Failed,Minor changes needed
